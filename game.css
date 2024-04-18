@@ -1,0 +1,189 @@
+/* Add your CSS styles here */
+body{
+    background-color: greenyellow;
+}
+.scoreboard {
+    text-align: center;
+    /* margin-top: 10px; */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    border-color: white;
+    border: 2px solid #ccc;
+    /* padding: 20px; */
+    /* border-radius: 10px; */
+    height: 70px;
+    width: 30%;
+    margin: 0 auto;
+    
+}
+.scoreboard .score .list{
+    float: left;
+    margin-left: 5%;
+}
+.scoreboard .score .card{
+    float: right;
+    margin-right: 20%;
+    margin-top: px;
+    margin-bottom: 50px;
+}
+#player-score{
+    background-color: #f2f2f2;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+}
+#computer-score{
+    
+
+}
+
+.game {
+    text-align: center;
+    /* margin-top: 10px; */
+    position: relative;
+    display: flex ;
+    margin-left: 46%;
+}
+
+.options {
+    margin-top: 50px;
+    margin-left: 40%;
+    margin-right: 30%;
+    /* position: relative; */
+    
+    
+}
+.gradient-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,0) 50%, rgba(0,0,0,0.6) 100%);
+    z-index: 1; /* Ensure it's above the image */
+    pointer-events: none; /* Make sure clicks go through to the image */
+}
+
+.btn {
+    margin: 5px;
+    padding: 20px 20px;
+    margin-top: 90px;
+    
+    border: 5px solid transparent; /* Add transparent border */
+    border-radius: 50%; /* Make the image circular */
+    box-sizing: border-box;
+    border-color: red;
+    
+}
+.btn-try{
+    margin: 5px;
+    padding: 20px 20px;
+    margin-top: 90px;
+    text-align: center;
+}
+.image-container:nth-child(1) {
+    top: 50%;
+    left: 50%;
+    transform: translate(50%, 100%);
+}
+
+.image-container:nth-child(2) {
+    top: 80%; /* Adjust as needed */
+    left: 25%;
+    transform: translate(-50%, -50%) rotate(60deg);
+}
+
+.image-container:nth-child(3) {
+    top: 80%; /* Adjust as needed */
+    left: 75%;
+    transform: translate(-60%, -50%) rotate(60deg);
+}
+
+.line {
+    position: absolute;
+    background-color: black;
+    z-index: -1; /* Ensure it's below the images */
+}
+
+.line1 {
+    width: 5px;
+    height: 120px; /* Adjust as needed */
+    top: 49%;
+    left: 0%;
+    transform: translateX(-50%);
+}
+
+.line2 {
+    width: 5px;
+    height: 105px; /* Adjust as needed */
+    top: 60%; /* Adjust as needed */
+    left: 104%;
+    transform: translateX(-50%) rotate(60deg);
+}
+
+.line3 {
+    width: 5px;
+    height: 103px; /* Adjust as needed */
+    top: 45%; /* Adjust as needed */
+    left: 93%;
+    transform: translateX(-50%) rotate(-55deg);
+}
+.result {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.rules-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.rules-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 20px;
+    z-index: 999;
+}
+
+.rules-content {
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.outcome {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.outcome h1 {
+    font-size: 48px;
+}
+
+.outcome p {
+    font-size: 24px;
+    margin-top: 20px;
+}
+li{
+    list-style-type: none;
+}
+.btn #try-again-btn{
+    text-align: center;
+    margin-left: 47%;
+}
+

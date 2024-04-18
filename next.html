@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>next</title>
+    <link rel="stylesheet" href="game.css">
+
+</head>
+<body>
+    <div>
+        <span>
+            <p>HURRY!!</p>
+        </span>
+        <P>YOU WON THE GAME</P>
+    </div>
+    <button id=try-again-btn onclick='tryagain()'>Try Again</button>
+
+    <script>
+        document.getElementById('try-again-btn').addEventListener('click', () => {
+            window.location.href = 'Game.html';
+        });
+    </script>
+    
+</body>
+</html>

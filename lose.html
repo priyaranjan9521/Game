@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lose</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div class="outcome">
+        <p>Your Score: <span id="player-score"></span></p>
+        <p>Computer Score: <span id="computer-score"></span></p>
+        <img id="player-choice-img" src="" alt="Player's Choice">
+        <h1>You Lose!</h1>
+        <img id="computer-choice-img" src="" alt="Computer's Choice">
+        
+    </div>
+    <div class="btn-try">    
+        <button onclick="tryAgain()" id="try-again-btn">Try Again</button>
+    </div>
+
+    <button class="rules-btn" onclick="showRules()">Rules</button>
+    <div class="rules-popup" id="rules-popup">
+        <div class="rules-content">
+            <span class="close" onclick="closeRules()">&times;</span>
+            <p>Rock beats Scissors, Scissors beats Paper, Paper beats Rock.</p>
+        </div>
+    </div>
+    <script>
+        // Function to retrieve scores from local storage
+        function retrieveScores() {
+            const playerScoreStr = localStorage.getItem("playerScore");
+            const computerScoreStr = localStorage.getItem("computerScore");
+            if (playerScoreStr !== null && computerScoreStr !== null) {
+                document.getElementById("player-score").innerText = playerScoreStr;
+                document.getElementById("computer-score").innerText = computerScoreStr;
+            }
+        }
+        // Call retrieveScores() function when the page loads
+        window.onload = retrieveScores;
+        
+        document.getElementById('try-again-btn').addEventListener('click', () => {
+            window.location.href = 'Game.html';
+        });
+        function displaySelectedImages() {
+            const choices = getQueryParams();
+            if (choices.player && choices.computer) {
+                document.getElementById("player-choice-img").src = `${choices.player}.png`;
+                document.getElementById("computer-choice-img").src = `${choices.computer}.png`;
+            }
+        }
+        window.onload = displaySelectedImages;
+        function showRules() {
+            document.getElementById("rules-popup").style.display = "block";
+        }
+
+        // Function to close rules popup
+        function closeRules() {
+            document.getElementById("rules-popup").style.display = "none";
+        }
+    </script>
+    <script src="game.js"></script>
+   
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div class="page1">
+        <div class="scoreboard">
+        
+            <div class="score">
+                <div class="list">
+                    <ul>
+                        <li>ROCK</li>
+                        <li>PAPER</li>
+                        <li>SCISSORS</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <p>Your Score: <span id="player-score">0</span></p>
+                
+                    <p>Computer Score: <span id="computer-score">0</span></p>
+                </div>
+    
+                
+            </div>
+            
+            
+        </div>
+        <div class="game">
+            <div class="options">
+                <div class="image-container">
+                    <img src="rock.png" alt="Rock" class="btn" id="rock" onclick="playerChoice('rock')">
+                </div>
+                <div class="image-container">
+                    <img src="paper.png" alt="Paper" class="btn" id="paper" onclick="playerChoice('paper')">
+                </div>
+                <div class="image-container">  
+                    <img src="scissors.png" alt="Scissors" class="btn" id="scissors" onclick="playerChoice('scissors')">
+                </div>
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
+            </div>
+            <div class="result" id="result"></div>
+        </div>
+        <button class="rules-btn" onclick="showRules()">Rules</button>
+        <div class="rules-popup" id="rules-popup">
+            <div class="rules-content">
+                <span class="close" onclick="closeRules()">&times;</span>
+                <p>Rock beats Scissors, Scissors beats Paper, Paper beats Rock.</p>
+            </div>
+        </div>
+    </div>
+   
+    
+    <script src="game.js"></script>
+</body>
+</html>
